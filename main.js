@@ -14,6 +14,7 @@ if(salario_bruto<=1100){
     //Para salários brutos maior ou igual a 1100,01 e menor ou igual a 2203,48, a taxa de desconto de INSS incidido no salário brutor é de 9%
     d = ((2203.48 - 1100.01) * (9 / 100)) + ((salario_bruto * (7.5 / 100)))
     salario_base = salario_bruto - d 
+    alert("vALOOR: " + salario_base)
 }else if(salario_bruto >= 2203.49 && salario_bruto <= 3305.22){
     //Para salários brutos maior ou igual a 2203,49 e menor ou igual a 3305,22, a taxa de desconto de INSS incidido no salário brutor é de 12%
     d = ((2203.48 - 1100.01) * (9 / 100)) + ((salario_bruto * (7.5 / 100)) + ((3305.22 - 2203.49) * (12 / 100)))
@@ -39,7 +40,9 @@ if(salario_bruto<=1100){
 
 //Para salários bases de até 1903,98, está isento o desconto de IRPF
 
-if(salario_base >= 1903.99 && salario_base <= 2826.65){
+if (salario_base < 1903.99){
+	  salario_liquido = salario_base
+}else if(salario_base >= 1903.99 && salario_base <= 2826.65){
     //Para salários bases maior ou igual a 1903,99 e menor ou igual a 2826,95, a taxa de desconto de IRPF incidido no salário base é de 7,5%
     d = (salario_base * (7.5 / 100))
     salario_liquido = salario_base - d
