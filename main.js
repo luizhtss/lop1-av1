@@ -61,6 +61,6 @@ if (salario_base < 1903.99){
 }
 
 
-// Formata e exibe a saída do salário base.
+// Formata e exibe a saída do salário líquido.
 salario_liquido = salario_liquido.toFixed(2)
 alert(salario_liquido)
