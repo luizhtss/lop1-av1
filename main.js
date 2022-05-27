@@ -37,7 +37,6 @@ if(salario_bruto<=1100){
     }
 }
 
-alert("Salário base: " + salario_base)
 //IRPF
 
 //Para salários bases de até 1903,98, está isento o desconto de IRPF
